@@ -1,0 +1,73 @@
+site_name: MuteKeeper
+site_url: https://kawato3.github.io/MuteKeeper/
+site_description: >-
+  DAWのトランスポート状態に連動して自動的にボリュームを制御する
+  無料オープンソースVST3プラグイン
+site_author: Katsushi Kawato
+
+docs_dir: site
+site_dir: _site
+
+theme:
+  name: material
+  language: ja
+  favicon: assets/images/icon.png
+  logo: assets/images/icon.png
+  palette:
+    scheme: slate
+    primary: blue
+    accent: light blue
+  font:
+    text: Noto Sans JP
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    # navigation.instant は mkdocs-static-i18n と非互換のため使用禁止
+  custom_dir: site/overrides
+plugins:
+  - search
+  - i18n:
+      reconfigure_material: true
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - locale: ja
+          name: 日本語
+          build: true
+          default: true
+          site_name: "MuteKeeper — DAW自動ボリューム制御プラグイン"
+          site_description: >-
+            DAWのトランスポート状態（停止・再生・録音）に連動して自動的にボリュームを
+            制御する無料オープンソースVST3プラグイン。ライブステージ、トークバックマイク、
+            リバーブ切り替えに最適。
+        - locale: en
+          name: English
+          build: true
+          site_name: "MuteKeeper — Automatic Volume Control for DAWs"
+          site_description: >-
+            Free, open-source VST3 plugin that automatically controls audio volume
+            based on DAW transport state. Perfect for talkback mics, reverb switching,
+            and stage monitoring.
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+copyright: "&copy; 2026 Katsushi Kawato — MIT License"

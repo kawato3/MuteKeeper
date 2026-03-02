@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MuteKeeper",
+    "applicationCategory": "MultimediaApplication",
+    "applicationSubCategory": "Audio Plugin",
+    "operatingSystem": "macOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "license": "https://opensource.org/licenses/MIT",
+    "url": "https://kawato3.github.io/MuteKeeper/",
+    "downloadUrl": "https://github.com/kawato3/MuteKeeper/releases/download/v1.0.0/MuteKeeper-1.0.0-macOS.dmg",
+    "softwareVersion": "1.0.0",
+    "author": {
+      "@type": "Person",
+      "name": "Katsushi Kawato"
+    },
+    "description": "Free, open-source VST3 plugin that automatically controls audio volume based on DAW transport state."
+  }
+  </script>
+{% endblock %}
