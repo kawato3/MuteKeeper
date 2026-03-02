@@ -86,8 +86,6 @@ For manipulators and monitor engineers, transport-aware automatic volume control
 Open the DMG and run the installer.
 The VST3 plugin will be installed to `/Library/Audio/Plug-Ins/VST3/`.
 
-All releases are available on [GitHub Releases](https://github.com/kawato3/MuteKeeper/releases).
-
 ### Windows
 
 Windows support is planned. (TBD)
