@@ -10,6 +10,7 @@ description: "Free VST3 plugin that automatically controls volume based on DAW t
 **Automatic volume control that responds to your DAW's transport state**
 
 [Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.0/MuteKeeper-1.0.0-macOS.dmg){ .md-button .md-button--primary }
+[Download (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.1/MuteKeeper-1.0.1-Windows.exe){ .md-button .md-button--primary }
 
 </div>
 
@@ -85,14 +86,17 @@ The VST3 plugin will be installed to `/Library/Audio/Plug-Ins/VST3/`.
 
 ### Windows
 
-Windows support is planned. (TBD)
+[Download MuteKeeper v1.0.1 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.1/MuteKeeper-1.0.1-Windows.exe){ .md-button .md-button--primary }
+
+Run the installer.
+The VST3 plugin will be installed to `C:\Program Files\Common Files\VST3\`.
 
 ## Specifications { #specs }
 
 | Item | Detail |
 |------|--------|
 | Plugin Format | VST3 |
-| Supported OS | macOS (Intel / Apple Silicon) |
+| Supported OS | macOS (Intel / Apple Silicon), Windows 10/11 (64-bit) |
 | Volume Range | Mute to +10 dB |
 | Fade Time | 0 to 5000 ms (perceptual curve) |
 | Latency | 0 samples |

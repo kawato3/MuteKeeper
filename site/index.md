@@ -10,6 +10,7 @@ description: "DAWの再生・停止・録音状態に連動して自動的にボ
 **DAW の再生状態に連動する、自動ミュート・ボリューム制御プラグイン**
 
 [ダウンロード (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.0/MuteKeeper-1.0.0-macOS.dmg){ .md-button .md-button--primary }
+[ダウンロード (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.1/MuteKeeper-1.0.1-Windows.exe){ .md-button .md-button--primary }
 
 </div>
 
@@ -86,14 +87,17 @@ VST3 プラグインは `/Library/Audio/Plug-Ins/VST3/` にインストールさ
 
 ### Windows
 
-Windows 版は現在開発中です。(TBD)
+[MuteKeeper v1.0.1 をダウンロード :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.1/MuteKeeper-1.0.1-Windows.exe){ .md-button .md-button--primary }
+
+インストーラーを実行してください。
+VST3 プラグインは `C:\Program Files\Common Files\VST3\` にインストールされます。
 
 ## 技術仕様 { #specs }
 
 | 項目 | 仕様 |
 |------|------|
 | プラグイン形式 | VST3 |
-| 対応 OS | macOS (Intel / Apple Silicon) |
+| 対応 OS | macOS (Intel / Apple Silicon), Windows 10/11 (64-bit) |
 | ボリューム範囲 | Mute 〜 +10 dB |
 | フェードタイム | 0 〜 5000 ms（知覚カーブ対応） |
 | レイテンシー | 0 サンプル |
