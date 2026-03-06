@@ -62,7 +62,7 @@ Insert MuteKeeper on your talkback mic channel.
 The talkback mic is automatically muted during playback and restored when the DAW stops.
 If needed, you can mute talkback only during recording, then keep it active during playback to listen while conversing.
 
-### :material-reverb: Reverb / FX Switching
+### :material-waves: Reverb / FX Switching
 
 Place MuteKeeper on your reverb send channel, immediately before the reverb.
 
@@ -71,7 +71,7 @@ Place MuteKeeper on your reverb send channel, immediately before the reverb.
 
 Full reverb during performance, automatically reduced or off during talk segments.
 
-### :material-click: Turning the click track
+### :material-metronome-tick: Turning the click track
 
 Keep the click track active during recording, then mute it when listening back. There are many patterns you can apply.
 
@@ -104,7 +104,7 @@ The VST3 plugin will be installed to `C:\Program Files\Common Files\VST3\`.
 
 ## For Muteomatic Users { #comparison }
 
-MuteKeeper was inspired by **[Muteomatic](https://www.soundradix.com/products/mute-o-matic/)** (Mute-o-Matic), the free plugin by [Sound Radix](https://www.soundradix.com/).
+MuteKeeper is inspired by **[Muteomatic](https://www.soundradix.com/products/mute-o-matic/)** (Mute-o-Matic), the free plugin by [Sound Radix](https://www.soundradix.com/).
 
 Muteomatic is an excellent plugin for transport-aware mute control, trusted by engineers for years. **If simple mute ON/OFF control is all you need, Muteomatic remains a great choice.** We absolutely love Muteomatic.
 
