@@ -9,8 +9,8 @@ description: "Free VST3/AUv3 plugin that automatically controls volume based on 
 
 **Automatic volume control that responds to your DAW's transport state**
 
-[Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.0/MuteKeeper-1.0.0-macOS.dmg){ .md-button .md-button--primary }
-[Download (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.1/MuteKeeper-1.0.1-Windows.exe){ .md-button .md-button--primary }
+[Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.2/MuteKeeper-1.0.2-macOS.dmg){ .md-button .md-button--primary }
+[Download (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.2/MuteKeeper-1.0.2-Windows.exe){ .md-button .md-button--primary }
 
 </div>
 
@@ -50,6 +50,9 @@ Unlike simple mute switches, MuteKeeper offers **gradual volume control at any d
 :material-surround-sound: **Multi-Channel Support**
 :   Works with mono, stereo, surround (5.1 / 7.1), and any other multi-channel configuration.
 
+:material-chart-bar: **IN/OUT Level Meter**
+:   Visual input/output level monitoring. Collapsible section — show it only when you need it.
+
 :material-auto-fix: **Full DAW Automation**
 :   Every parameter supports DAW automation for complete control.
 
@@ -84,14 +87,14 @@ Keep the click track active during recording, then mute it when listening back. 
 
 ### macOS
 
-[Download MuteKeeper v1.0.0 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.0/MuteKeeper-1.0.0-macOS.dmg){ .md-button .md-button--primary }
+[Download MuteKeeper v1.0.2 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.2/MuteKeeper-1.0.2-macOS.dmg){ .md-button .md-button--primary }
 
 Open the DMG and run the installer.
 The VST3 plugin will be installed to `/Library/Audio/Plug-Ins/VST3/`, and the AUv3 plugin to `/Applications/MuteKeeper.app`.
 
 ### Windows
 
-[Download MuteKeeper v1.0.1 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.1/MuteKeeper-1.0.1-Windows.exe){ .md-button .md-button--primary }
+[Download MuteKeeper v1.0.2 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.2/MuteKeeper-1.0.2-Windows.exe){ .md-button .md-button--primary }
 
 Run the installer.
 The VST3 plugin will be installed to `C:\Program Files\Common Files\VST3\`.
