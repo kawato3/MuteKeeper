@@ -9,8 +9,8 @@ description: "Free VST3/AUv3 plugin that automatically controls volume based on 
 
 **Automatic volume control that responds to your DAW's transport state**
 
-[Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.2/MuteKeeper-1.0.2-macOS.dmg){ .md-button .md-button--primary }
-[Download (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.2/MuteKeeper-1.0.2-Windows.exe){ .md-button .md-button--primary }
+[Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-macOS.dmg){ .md-button .md-button--primary }
+[Download (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-Windows.exe){ .md-button .md-button--primary }
 
 </div>
 
@@ -87,14 +87,14 @@ Keep the click track active during recording, then mute it when listening back. 
 
 ### macOS
 
-[Download MuteKeeper v1.0.2 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.2/MuteKeeper-1.0.2-macOS.dmg){ .md-button .md-button--primary }
+[Download MuteKeeper v1.0.3 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-macOS.dmg){ .md-button .md-button--primary }
 
 Open the DMG and run the installer.
 The VST3 plugin will be installed to `/Library/Audio/Plug-Ins/VST3/`, and the AUv3 plugin to `/Applications/MuteKeeper.app`.
 
 ### Windows
 
-[Download MuteKeeper v1.0.2 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.2/MuteKeeper-1.0.2-Windows.exe){ .md-button .md-button--primary }
+[Download MuteKeeper v1.0.3 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-Windows.exe){ .md-button .md-button--primary }
 
 Run the installer.
 The VST3 plugin will be installed to `C:\Program Files\Common Files\VST3\`.
@@ -103,13 +103,13 @@ The VST3 plugin will be installed to `C:\Program Files\Common Files\VST3\`.
 
 | Item | Detail |
 |------|--------|
-| Plugin Format | VST3, AUv3 (macOS) |
+| Plugin Format | VST3, AUv3, AAX (macOS) / VST3 (Windows) |
 | Supported OS | macOS (Intel / Apple Silicon), Windows 10/11 (64-bit) |
 | Channel Layouts | Mono / Stereo / Surround (any channel count) |
 | Volume Range | Mute to +10 dB |
 | Fade Time | 0 to 5000 ms (perceptual curve) |
 | Latency | 0 samples |
-| License | MIT (free and open source) |
+| License | Free to use (proprietary) |
 
 ## For Muteomatic Users { #comparison }
 
@@ -166,4 +166,4 @@ MuteKeeper is free to use. If you enjoy it, consider buying me a coffee :coffee:
 
 ## License { #license }
 
-MuteKeeper is released under the [MIT License](https://github.com/kawato3/MuteKeeper/blob/main/LICENSE). Free for personal and commercial use.
+MuteKeeper is free to use. Please review the [End User License Agreement (EULA)](eula.md) and [Third-Party Notice](third-party-notice.md) before use.
