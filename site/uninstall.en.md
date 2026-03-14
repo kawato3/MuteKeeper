@@ -19,9 +19,6 @@ This page explains how to remove MuteKeeper from your system.
 
 This will automatically remove all files that were installed by the installer.
 
-!!! note "Versions prior to v1.0.1"
-    Installers from v1.0.1 and earlier did not include an uninstaller, so MuteKeeper will not appear in "Apps & Features." Follow the manual removal steps below instead.
-
 ### Manual Removal
 
 Delete the following folder using File Explorer:
