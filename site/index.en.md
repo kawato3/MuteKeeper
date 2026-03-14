@@ -90,7 +90,10 @@ Keep the click track active during recording, then mute it when listening back. 
 [Download MuteKeeper v1.0.3 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-macOS.dmg){ .md-button .md-button--primary }
 
 Open the DMG and run the installer.
-The VST3 plugin will be installed to `/Library/Audio/Plug-Ins/VST3/`, and the AUv3 plugin to `/Applications/MuteKeeper.app`.
+
+- **VST3**: `/Library/Audio/Plug-Ins/VST3/`
+- **AUv3**: `/Applications/MuteKeeper.app` (embedded as App Extension)
+- **AAX**: `/Library/Application Support/Avid/Audio/Plug-Ins/`
 
 ### Windows
 
