@@ -9,7 +9,7 @@ description: "Free VST3/AUv3 plugin that automatically controls volume based on 
 
 **Automatic volume control that responds to your DAW's transport state**
 
-[Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-macOS.dmg){ .md-button .md-button--primary }
+[Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.4/MuteKeeper-1.0.4-macOS.dmg){ .md-button .md-button--primary }
 [Download (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-Windows.exe){ .md-button .md-button--primary }
 
 </div>
@@ -87,7 +87,7 @@ Keep the click track active during recording, then mute it when listening back. 
 
 ### macOS
 
-[Download MuteKeeper v1.0.3 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-macOS.dmg){ .md-button .md-button--primary }
+[Download MuteKeeper v1.0.4 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.4/MuteKeeper-1.0.4-macOS.dmg){ .md-button .md-button--primary }
 
 Open the DMG and run the installer.
 The VST3 plugin will be installed to `/Library/Audio/Plug-Ins/VST3/`, and the AUv3 plugin to `/Applications/MuteKeeper.app`.
