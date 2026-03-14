@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/eula/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/eula/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/eula/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/manual/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/manual/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/manual/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/third-party-notice/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/third-party-notice/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/third-party-notice/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/uninstall/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/uninstall/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/uninstall/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/en/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/en/eula/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/eula/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/eula/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/en/manual/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/manual/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/manual/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/en/third-party-notice/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/third-party-notice/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/third-party-notice/"/>
+    </url>
+    <url>
+        <loc>https://kawato3.github.io/MuteKeeper/en/uninstall/</loc>
+        <lastmod>2026-03-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kawato3.github.io/MuteKeeper/en/uninstall/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kawato3.github.io/MuteKeeper/uninstall/"/>
+    </url>
+</urlset>

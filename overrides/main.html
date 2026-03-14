@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MuteKeeper",
+    "applicationCategory": "MultimediaApplication",
+    "applicationSubCategory": "Audio Plugin",
+    "operatingSystem": "macOS, Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://kawato3.github.io/MuteKeeper/",
+    "downloadUrl": "https://github.com/kawato3/MuteKeeper/releases/tag/v1.0.4",
+    "softwareVersion": "1.0.4",
+    "author": {
+      "@type": "Person",
+      "name": "Katsushi Kawato"
+    },
+    "description": "Free plugin that automatically controls audio volume based on DAW transport state."
+  }
+  </script>
+{% endblock %}

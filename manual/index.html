@@ -1,0 +1,1601 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MuteKeeper の使い方をユースケース付きで詳しく解説。トークバックマイク、リバーブ制御、クリックトラックの設定例。">
+      
+      
+        <meta name="author" content="Katsushi Kawato">
+      
+      
+        <link rel="canonical" href="https://kawato3.github.io/MuteKeeper/manual/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../uninstall/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="ja">
+        
+          <link rel="alternate" href="../en/manual/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>ユーザーマニュアル — MuteKeeper - MuteKeeper — DAW自動ボリューム制御プラグイン</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans JP";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MuteKeeper",
+    "applicationCategory": "MultimediaApplication",
+    "applicationSubCategory": "Audio Plugin",
+    "operatingSystem": "macOS, Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://kawato3.github.io/MuteKeeper/",
+    "downloadUrl": "https://github.com/kawato3/MuteKeeper/releases/tag/v1.0.4",
+    "softwareVersion": "1.0.4",
+    "author": {
+      "@type": "Person",
+      "name": "Katsushi Kawato"
+    },
+    "description": "Free plugin that automatically controls audio volume based on DAW transport state."
+  }
+  </script>
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="MuteKeeper — DAW自動ボリューム制御プラグイン" class="md-header__button md-logo" aria-label="MuteKeeper — DAW自動ボリューム制御プラグイン" data-md-component="logo">
+      
+  <img src="../assets/images/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MuteKeeper — DAW自動ボリューム制御プラグイン
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ユーザーマニュアル — MuteKeeper
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="言語切り替え">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../en/manual/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ホーム
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ユーザーマニュアル
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../uninstall/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  アンインストール
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../eula/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  EULA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../third-party-notice/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Third-Party Notice
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MuteKeeper — DAW自動ボリューム制御プラグイン" class="md-nav__button md-logo" aria-label="MuteKeeper — DAW自動ボリューム制御プラグイン" data-md-component="logo">
+      
+  <img src="../assets/images/icon.png" alt="logo">
+
+    </a>
+    MuteKeeper — DAW自動ボリューム制御プラグイン
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ホーム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ユーザーマニュアル
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ユーザーマニュアル
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ui-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        画面の見かた
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="画面の見かた">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ヘッダー
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ボリューム コントロール
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ボリューム コントロール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stopped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STOPPED（停止中）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playing-rec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PLAYING / REC（再生/録音中）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate-rec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separate REC mode チェックボックス
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        レベルメーター
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        フッター
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        デフォルト設定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fade-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        フェードタイム — MuteKeeper の鍵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talkback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ユースケース 1: トークバック マイクの制御
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ユースケース 1: トークバック マイクの制御">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やりたいこと
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAW での準備
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#talkback-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本編: 再生・録音中はミュート
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#talkback-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        応用編: 再生中は話せて、録音中だけミュート
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ユースケース 2: リバーブ / エフェクトの制御
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ユースケース 2: リバーブ / エフェクトの制御">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やりたいこと
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daw_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAW での準備
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverb-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本編: 再生中だけリバーブ ON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverb-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        応用編: 録音中はリバーブ薄め、再生中はフル
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#click" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ユースケース 3: クリック トラックのオン・オフ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ユースケース 3: クリック トラックのオン・オフ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やりたいこと
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daw_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAW での準備
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#click-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        設定例: 録音中だけクリック ON
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        パラメータ一覧
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        既知の制限
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uninstall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    アンインストール
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eula/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EULA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../third-party-notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Third-Party Notice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ui-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        画面の見かた
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="画面の見かた">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ヘッダー
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ボリューム コントロール
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ボリューム コントロール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stopped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STOPPED（停止中）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playing-rec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PLAYING / REC（再生/録音中）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate-rec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separate REC mode チェックボックス
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        レベルメーター
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        フッター
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        デフォルト設定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fade-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        フェードタイム — MuteKeeper の鍵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talkback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ユースケース 1: トークバック マイクの制御
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ユースケース 1: トークバック マイクの制御">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やりたいこと
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAW での準備
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#talkback-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本編: 再生・録音中はミュート
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#talkback-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        応用編: 再生中は話せて、録音中だけミュート
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ユースケース 2: リバーブ / エフェクトの制御
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ユースケース 2: リバーブ / エフェクトの制御">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やりたいこと
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daw_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAW での準備
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverb-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本編: 再生中だけリバーブ ON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverb-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        応用編: 録音中はリバーブ薄め、再生中はフル
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#click" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ユースケース 3: クリック トラックのオン・オフ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ユースケース 3: クリック トラックのオン・オフ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やりたいこと
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daw_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAW での準備
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#click-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        設定例: 録音中だけクリック ON
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        パラメータ一覧
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        既知の制限
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">ユーザーマニュアル<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>MuteKeeper の画面構成と、具体的なユースケースを紹介します。
+MuteKeeper の概要やダウンロードについては<a href="../">ホーム</a>をご覧ください。</p>
+<hr />
+<h2 id="ui-overview">画面の見かた<a class="headerlink" href="#ui-overview" title="Permanent link">&para;</a></h2>
+<p>MuteKeeper の画面は、大きく分けて <strong>ヘッダー</strong>、<strong>ボリューム コントロール</strong>（2〜3 セクション）、<strong>レベルメーター</strong>、<strong>フッター</strong> で構成されています。</p>
+<p><img alt="MuteKeeper の画面" class="screenshot" src="../assets/images/manual/talkback-basic.png" /></p>
+<h3 id="header">ヘッダー<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
+<p>画面上部のエリアです。</p>
+<ul>
+<li><strong>左側</strong>: MuteKeeper のロゴ</li>
+<li><strong>中央〜右側</strong>: <strong>FADE</strong> ラベルとフェードタイムの値（例: <code>50 ms</code>）。ドラッグで上下に調整でき、ダブルクリックで直接数値を入力できます。設定範囲は 0〜5000 ms です</li>
+<li><strong>右端</strong>: <strong>スケールボタン</strong>（<code>100%</code> / <code>150%</code> / <code>200%</code>）。クリックで切り替わり、画面の表示倍率が変わります</li>
+</ul>
+<h3 id="volume-controls">ボリューム コントロール<a class="headerlink" href="#volume-controls" title="Permanent link">&para;</a></h3>
+<p>各トランスポート状態（停止・再生・録音）に対応するボリューム コントロールが縦に並んでいます。各コントロールの構成は共通です:</p>
+<ul>
+<li><strong>LED インジケーター</strong>: 丸い点灯表示。現在アクティブな状態のものが光ります（停止/再生 = 緑、録音 = 赤）</li>
+<li><strong>状態タイトル</strong>: <code>STOPPED</code>、<code>PLAYING / REC</code>、<code>RECORDING</code> など</li>
+<li><strong>M ボタン</strong>: ミュート（-100 dB）に設定します。青くハイライトされている時はミュート状態です</li>
+<li><strong>ON ボタン</strong>: 0 dB（原音そのまま）に設定します。青くハイライトされている時は 0 dB です</li>
+<li><strong>スライダー</strong>: 水平方向にドラッグしてボリュームを調整します。範囲は Mute〜+10 dB。0 dB 付近でスナップ（吸着）します</li>
+<li><strong>dB 値ラベル</strong>: 現在のボリューム値を表示します。クリックして数値を直接入力したり、上下にドラッグして微調整できます</li>
+</ul>
+<h4 id="stopped">STOPPED（停止中）<a class="headerlink" href="#stopped" title="Permanent link">&para;</a></h4>
+<p>DAW が停止している時に適用されるボリュームです。</p>
+<h4 id="playing-rec">PLAYING / REC（再生/録音中）<a class="headerlink" href="#playing-rec" title="Permanent link">&para;</a></h4>
+<p>DAW が再生中または録音中に適用されるボリュームです。デフォルトでは再生と録音で同じ設定が共有されます。</p>
+<h4 id="separate-rec">Separate REC mode チェックボックス<a class="headerlink" href="#separate-rec" title="Permanent link">&para;</a></h4>
+<p>PLAYING セクションの右端にあるチェックボックスです。</p>
+<ul>
+<li><strong>OFF（デフォルト）</strong>: 再生と録音は同じボリュームを共有。タイトルは <code>PLAYING / REC</code> と表示されます</li>
+<li><strong>ON</strong>: RECORDING セクションが画面下部に追加表示され、録音時のボリュームを個別に設定できます。タイトルはそれぞれ <code>PLAYING</code>、<code>RECORDING</code> になります</li>
+</ul>
+<h3 id="meter">レベルメーター<a class="headerlink" href="#meter" title="Permanent link">&para;</a></h3>
+<p>ボリューム コントロールの下に配置された、折りたたみ式の IN/OUT レベルメーターです。</p>
+<ul>
+<li><strong>▾ METER</strong> ヘッダーをクリックすると表示・非表示を切り替えられます</li>
+<li><strong>IN</strong>: MuteKeeper に入力される信号レベル（ゲイン適用前）</li>
+<li><strong>OUT</strong>: MuteKeeper から出力される信号レベル（ゲイン適用後）</li>
+</ul>
+<p>信号が来ているか、ボリューム設定が正しく適用されているかを視覚的に確認できます。表示状態は DAW プロジェクトに保存されます。</p>
+<h3 id="footer">フッター<a class="headerlink" href="#footer" title="Permanent link">&para;</a></h3>
+<p>画面下部にバージョンとコピーライトが表示されます。</p>
+<h3 id="defaults">デフォルト設定<a class="headerlink" href="#defaults" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パラメータ</th>
+<th>デフォルト値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stopped Volume</td>
+<td>0 dB</td>
+</tr>
+<tr>
+<td>Playing Volume</td>
+<td>Mute</td>
+</tr>
+<tr>
+<td>Recording Volume</td>
+<td>0 dB</td>
+</tr>
+<tr>
+<td>Recording Linked</td>
+<td>ON（PLAYING と共有）</td>
+</tr>
+<tr>
+<td>Fade Time</td>
+<td>50 ms</td>
+</tr>
+<tr>
+<td>Meter Visible</td>
+<td>ON（表示）</td>
+</tr>
+<tr>
+<td>UI Scale</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fade-time">フェードタイム — MuteKeeper の鍵<a class="headerlink" href="#fade-time" title="Permanent link">&para;</a></h2>
+<p>MuteKeeper の大きな特長のひとつが、<strong>設定可能なフェードタイム</strong>です。DAW のトランスポート状態が変わった時に、ボリュームが瞬時に切り替わるのではなく、指定した時間をかけて滑らかに移行します。</p>
+<p>フェードには知覚カーブ（パーセプチュアルカーブ）が適用されるため、聴感的に自然な音量変化になります。</p>
+<p>用途に合わせてフェードタイムを調整してみてください:</p>
+<table>
+<thead>
+<tr>
+<th>フェードタイム</th>
+<th>用途の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 ms</td>
+<td>完全に瞬時の切り替え（まれにクリックノイズが出ることがあります）</td>
+</tr>
+<tr>
+<td>3〜5 ms</td>
+<td>クリックトラックなど、立ち上がりが重要な音</td>
+</tr>
+<tr>
+<td>50 ms</td>
+<td>デフォルト値。多くの用途で十分にスムーズ</td>
+</tr>
+<tr>
+<td>500〜2000 ms</td>
+<td>リバーブやエフェクトの自然なフェードイン・アウト</td>
+</tr>
+<tr>
+<td>〜5000 ms</td>
+<td>ドラマチックなフェード演出</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">フェードタイムを積極的に活用しましょう</p>
+<p>フェードタイムは MuteKeeper を単なるミュート スイッチ以上のツールにする機能です。ユースケースごとに最適な値を見つけてみてください。</p>
+</div>
+<hr />
+<h2 id="talkback">ユースケース 1: トークバック マイクの制御<a class="headerlink" href="#talkback" title="Permanent link">&para;</a></h2>
+<h3 id="_2">やりたいこと<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>レコーディング セッションで、ブースへの指示用にトークバック マイクを使っている場合に、DAW の再生・録音中はマイクを自動的にミュートし、停止するとすぐに話せるようにしたい。</p>
+<h3 id="daw">DAW での準備<a class="headerlink" href="#daw" title="Permanent link">&para;</a></h3>
+<ol>
+<li>DAW にトークバック マイク用のチャンネル（トラック）を作成します</li>
+<li>そのチャンネルの <strong>インサート</strong> に MuteKeeper を配置します</li>
+</ol>
+<h3 id="talkback-basic">基本編: 再生・録音中はミュート<a class="headerlink" href="#talkback-basic" title="Permanent link">&para;</a></h3>
+<p>もっともシンプルな設定です。DAW が動いている間はマイクを切り、止まったら自動的に復帰します。</p>
+<p><strong>MuteKeeper の設定:</strong></p>
+<ul>
+<li><strong>STOPPED</strong>: 0 dB（<strong>ON</strong> ボタンを押す）</li>
+<li><strong>PLAYING / REC</strong>: Mute（<strong>M</strong> ボタンを押す）</li>
+<li><strong>Fade Time</strong>: 50 ms（デフォルトのままで OK）</li>
+</ul>
+<p><img alt="トークバック 基本設定" class="screenshot" src="../assets/images/manual/talkback-basic.png" /></p>
+<p><strong>動作</strong>: DAW の再生ボタンや録音ボタンを押すとマイクがミュートされ、停止するとすぐに話せるようになります。</p>
+<h3 id="talkback-advanced">応用編: 再生中は話せて、録音中だけミュート<a class="headerlink" href="#talkback-advanced" title="Permanent link">&para;</a></h3>
+<p>録ったテイクを聞きながらブースと会話したい場合。再生中はマイクを生かしておき、録音中だけミュートします。</p>
+<p><strong>MuteKeeper の設定:</strong></p>
+<ol>
+<li><strong>Separate REC mode</strong> チェックボックスを <strong>ON</strong> にします</li>
+<li><strong>STOPPED</strong>: 0 dB</li>
+<li><strong>PLAYING</strong>: 0 dB</li>
+<li><strong>RECORDING</strong>: Mute</li>
+<li><strong>Fade Time</strong>: 50 ms</li>
+</ol>
+<p><img alt="トークバック 応用設定" class="screenshot" src="../assets/images/manual/talkback-advanced.png" /></p>
+<p><strong>動作</strong>: 停止中・再生中はマイクが通じていて会話できます。録音ボタンを押した瞬間にマイクがミュートされ、録音を止めると復帰します。</p>
+<hr />
+<h2 id="reverb">ユースケース 2: リバーブ / エフェクトの制御<a class="headerlink" href="#reverb" title="Permanent link">&para;</a></h2>
+<h3 id="_3">やりたいこと<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>ボーカルにリバーブを掛けている場合、オケを流して歌っている時はリバーブを掛けたいけど、停止中（しゃべっている間）はリバーブを切りたい。レコーディングでもライブでもよくあるケースです。</p>
+<h3 id="daw_1">DAW での準備<a class="headerlink" href="#daw_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>リバーブの <strong>センド（AUX / バス）チャンネル</strong> で、リバーブ プラグインの <strong>直前</strong> に MuteKeeper を配置します</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">なぜリバーブの「直前」？</p>
+<p>MuteKeeper はリバーブへの「入力信号」を制御します。リバーブの直前に配置することで、停止時にリバーブへの入力がフェードアウトし、リバーブ テイルが自然に消えていきます。</p>
+</div>
+<h3 id="reverb-basic">基本編: 再生中だけリバーブ ON<a class="headerlink" href="#reverb-basic" title="Permanent link">&para;</a></h3>
+<p><strong>MuteKeeper の設定:</strong></p>
+<ul>
+<li><strong>STOPPED</strong>: Mute（<strong>M</strong> ボタンを押す）</li>
+<li><strong>PLAYING / REC</strong>: 0 dB（<strong>ON</strong> ボタンを押す）</li>
+<li><strong>Fade Time</strong>: 1500 ms</li>
+</ul>
+<p><img alt="リバーブ 基本設定" class="screenshot" src="../assets/images/manual/reverb-basic.png" /></p>
+<p><strong>動作</strong>: DAW を再生すると 1.5 秒かけてリバーブが自然に掛かり始めます。停止すると同じく 1.5 秒かけてフェードアウトします。</p>
+<div class="admonition tip">
+<p class="admonition-title">フェードタイムは 1〜2 秒がおすすめ</p>
+<p>リバーブの場合、フェードタイムを長めに設定するのがポイントです。短すぎると切り替わりが唐突に感じられます。1000〜2000 ms を試してみてください。</p>
+</div>
+<h3 id="reverb-advanced">応用編: 録音中はリバーブ薄め、再生中はフル<a class="headerlink" href="#reverb-advanced" title="Permanent link">&para;</a></h3>
+<p>録音中はリバーブを薄めにして歌いやすくし、プレイバック時にはフル量で確認したい。停止中はリバーブ OFF。</p>
+<p><strong>MuteKeeper の設定:</strong></p>
+<ol>
+<li><strong>Separate REC mode</strong> チェックボックスを <strong>ON</strong> にします</li>
+<li><strong>STOPPED</strong>: Mute</li>
+<li><strong>PLAYING</strong>: 0 dB</li>
+<li><strong>RECORDING</strong>: -6.0 dB</li>
+<li><strong>Fade Time</strong>: 2000 ms</li>
+</ol>
+<p><img alt="リバーブ 応用設定" class="screenshot" src="../assets/images/manual/reverb-advanced.png" /></p>
+<p><strong>動作</strong>: 停止中はリバーブ OFF。録音を始めると 2 秒かけてリバーブが -6 dB（やや薄め）まで掛かります。プレイバックに切り替えると 2 秒かけてフルの 0 dB まで上がります。</p>
+<hr />
+<h2 id="click">ユースケース 3: クリック トラックのオン・オフ<a class="headerlink" href="#click" title="Permanent link">&para;</a></h2>
+<h3 id="_4">やりたいこと<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>DAW 内蔵のクリックではなく、別途クリック用のチャンネルがある場合に、録音中はクリックを鳴らし、確認のプレイバック時は鳴らさないようにしたい。</p>
+<h3 id="daw_2">DAW での準備<a class="headerlink" href="#daw_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>クリック音源が配置されたチャンネルの <strong>インサート</strong> に MuteKeeper を配置します</li>
+</ol>
+<h3 id="click-basic">設定例: 録音中だけクリック ON<a class="headerlink" href="#click-basic" title="Permanent link">&para;</a></h3>
+<p><strong>MuteKeeper の設定:</strong></p>
+<ol>
+<li><strong>Separate REC mode</strong> チェックボックスを <strong>ON</strong> にします</li>
+<li><strong>STOPPED</strong>: Mute</li>
+<li><strong>PLAYING</strong>: Mute</li>
+<li><strong>RECORDING</strong>: 0 dB（<strong>ON</strong> ボタンを押す）</li>
+<li><strong>Fade Time</strong>: <strong>5 ms</strong></li>
+</ol>
+<p><img alt="クリック 設定" class="screenshot" src="../assets/images/manual/click-basic.png" /></p>
+<p><strong>動作</strong>: 録音中だけクリックが聞こえ、再生や停止に切り替えるとほぼ瞬時にミュートされます。</p>
+<div class="admonition warning">
+<p class="admonition-title">フェードタイムは 3〜5 ms を推奨</p>
+<p>クリック トラックは立ち上がりが重要な音です。フェードタイムは極力短くしましょう。ただし <strong>0 ms だと切り替え時にノイズが出ることがあります</strong>ので、3〜5 ms 程度に設定するのが安全です。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">プレイバック時にクリックを薄っすら鳴らす</p>
+<p>PLAYING のボリュームを Mute ではなく -20 dB 程度に設定すると、プレイバック時にクリックが薄く聞こえるようになります。テンポ確認しながら聞き返したい場合に便利です。</p>
+</div>
+<hr />
+<h2 id="parameters">パラメータ一覧<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>パラメータ</th>
+<th>範囲</th>
+<th>デフォルト</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stopped Volume</td>
+<td>Mute 〜 +10 dB</td>
+<td>0 dB</td>
+<td>DAW 停止中のボリューム</td>
+</tr>
+<tr>
+<td>Playing Volume</td>
+<td>Mute 〜 +10 dB</td>
+<td>Mute</td>
+<td>DAW 再生中のボリューム</td>
+</tr>
+<tr>
+<td>Recording Volume</td>
+<td>Mute 〜 +10 dB</td>
+<td>0 dB</td>
+<td>DAW 録音中のボリューム</td>
+</tr>
+<tr>
+<td>Recording Linked</td>
+<td>ON / OFF</td>
+<td>ON</td>
+<td>OFF で録音ボリュームを個別設定</td>
+</tr>
+<tr>
+<td>Fade Time</td>
+<td>0 〜 5000 ms</td>
+<td>50 ms</td>
+<td>状態切り替え時のフェード時間</td>
+</tr>
+<tr>
+<td>Meter Visible</td>
+<td>ON / OFF</td>
+<td>ON</td>
+<td>IN/OUT レベルメーターの表示</td>
+</tr>
+<tr>
+<td>UI Scale</td>
+<td>100% / 150% / 200%</td>
+<td>100%</td>
+<td>画面の表示倍率</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>0 dB はビットパーフェクト</strong>: ボリュームが 0 dB の時は信号処理を一切行わず、入力をそのまま出力します。音質劣化はゼロです</li>
+<li><strong>0 dB スナップ</strong>: スライダーを操作する際、0 dB 付近（±1 dB 以内）で自動的に 0 dB にスナップ（吸着）します</li>
+<li><strong>ミュート スナップ</strong>: -75 dB 以下の値は自動的に Mute（-100 dB）にスナップします</li>
+<li><strong>DAW オートメーション</strong>: すべてのパラメータは DAW のオートメーション レーンから制御できます。フェードタイムやボリューム値を楽曲中で変化させることも可能です</li>
+<li><strong>マルチチャンネル対応</strong>: モノラル、ステレオだけでなく、サラウンド（5.1 / 7.1 等）を含む任意のチャンネル構成で動作します。すべてのチャンネルに均一にボリュームが適用されます</li>
+<li><strong>レイテンシー ゼロ</strong>: MuteKeeper はレイテンシーを追加しません（0 サンプル）</li>
+</ul>
+<hr />
+<h2 id="known-limitations">既知の制限<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Fender Studio Pro (CLAP)</strong>: macOS 版は CLAP プラグインを正しく扱えないことがあります（v8.0.2 で確認）。VST3 版をお使いください</li>
+<li><strong>REAPER (CLAP)</strong>: REAPER の CLAP ホスト実装が録音状態フラグを送信しないため、録音中も "Playing" として動作します。録音状態の区別が必要な場合は、VST3 版をお使いください</li>
+<li><strong>GarageBand (AUv3)</strong>: オーディオトラックでモニタリングが OFF の場合、トランスポート停止を検知できないことがあります。モニタリングを ON にすることで回避できます</li>
+<li><strong>AUv3 全般</strong>: UI スケール切り替え後、ホストのプラグインウィンドウサイズが追従しない場合があります。プラグインウィンドウを開き直すことで反映されます</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2026 Katsushi Kawato
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
