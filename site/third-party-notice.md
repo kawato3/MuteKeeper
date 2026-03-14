@@ -37,7 +37,20 @@ All rights relating to VST remain with Steinberg Media Technologies GmbH and/or 
 > Copyright (c) Steinberg Media Technologies GmbH
 > All rights reserved.
 
-## 4. Other Third-Party Components
+## 4. CLAP and clap-juce-extensions
+
+This Software supports the CLAP format through the use of clap-juce-extensions.
+CLAP is an open audio plugin standard. clap-juce-extensions is developed by Paul Walker and contributors.
+
+> clap-juce-extensions
+> Copyright (c) 2019-2020 Paul Walker
+> Licensed under the MIT License
+>
+> CLAP (CLever Audio Plugin)
+> Copyright (c) 2014-2024 Alexandre Music / u-he / Bitwig
+> Licensed under the MIT License
+
+## 5. Other Third-Party Components
 
 If this Software includes any additional third-party components, all rights in such components remain with their respective owners.
 Additional notices may be included in this file or in separate accompanying materials where required.

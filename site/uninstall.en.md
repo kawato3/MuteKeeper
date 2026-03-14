@@ -21,13 +21,12 @@ This will automatically remove all files that were installed by the installer.
 
 ### Manual Removal
 
-Delete the following folder using File Explorer:
+Delete the following folders using File Explorer. Administrator privileges are required.
 
 ```
 C:\Program Files\Common Files\VST3\MuteKeeper.vst3
+C:\Program Files\Common Files\CLAP\MuteKeeper.clap
 ```
-
-Administrator privileges are required to delete this folder.
 
 ---
 
@@ -59,6 +58,14 @@ If you installed the AAX version, remove it as well:
 
 ```bash
 sudo rm -rf "/Library/Application Support/Avid/Audio/Plug-Ins/MuteKeeper.aaxplugin"
+```
+
+#### CLAP
+
+If you installed the CLAP version, remove it as well:
+
+```bash
+sudo rm -rf "/Library/Audio/Plug-Ins/CLAP/MuteKeeper.clap"
 ```
 
 !!! tip "Using Finder instead of Terminal"

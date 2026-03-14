@@ -9,8 +9,8 @@ description: "Free plugin that automatically controls volume based on DAW transp
 
 **Automatic volume control that responds to your DAW's transport state**
 
-[Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-macOS.dmg){ .md-button .md-button--primary }
-[Download (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-Windows.exe){ .md-button .md-button--primary }
+[Download (macOS) :material-apple:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.4/MuteKeeper-1.0.4-macOS.dmg){ .md-button .md-button--primary }
+[Download (Windows) :material-microsoft-windows:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.4/MuteKeeper-1.0.4-Windows.exe){ .md-button .md-button--primary }
 
 </div>
 
@@ -87,26 +87,29 @@ Keep the click track active during recording, then mute it when listening back. 
 
 ### macOS
 
-[Download MuteKeeper v1.0.3 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-macOS.dmg){ .md-button .md-button--primary }
+[Download MuteKeeper v1.0.4 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.4/MuteKeeper-1.0.4-macOS.dmg){ .md-button .md-button--primary }
 
 Open the DMG and run the installer.
 
 - **VST3**: `/Library/Audio/Plug-Ins/VST3/`
 - **AUv3**: `/Applications/MuteKeeper.app` (embedded as App Extension)
 - **AAX**: `/Library/Application Support/Avid/Audio/Plug-Ins/`
+- **CLAP**: `/Library/Audio/Plug-Ins/CLAP/`
 
 ### Windows
 
-[Download MuteKeeper v1.0.3 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.3/MuteKeeper-1.0.3-Windows.exe){ .md-button .md-button--primary }
+[Download MuteKeeper v1.0.4 :material-download:](https://github.com/kawato3/MuteKeeper/releases/download/v1.0.4/MuteKeeper-1.0.4-Windows.exe){ .md-button .md-button--primary }
 
 Run the installer.
-The VST3 plugin will be installed to `C:\Program Files\Common Files\VST3\`.
+
+- **VST3**: `C:\Program Files\Common Files\VST3\`
+- **CLAP**: `C:\Program Files\Common Files\CLAP\`
 
 ## Specifications { #specs }
 
 | Item | Detail |
 |------|--------|
-| Plugin Format | VST3, AUv3, AAX (macOS) / VST3 (Windows) |
+| Plugin Format | VST3, AUv3, AAX, CLAP (macOS) / VST3, CLAP (Windows) |
 | Supported OS | macOS (Intel / Apple Silicon), Windows 10/11 (64-bit) |
 | Channel Layouts | Mono / Stereo / Surround (any channel count) |
 | Volume Range | Mute to +10 dB |
