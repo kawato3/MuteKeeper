@@ -1,6 +1,6 @@
 ---
 title: "MuteKeeper — Automatic Transport-Aware Volume Control for DAWs"
-description: "Free VST3/AUv3 plugin that automatically controls volume based on DAW transport state. Perfect for talkback mics, reverb switching, and stage monitoring."
+description: "Free plugin that automatically controls volume based on DAW transport state. Perfect for talkback mics, reverb switching, and stage monitoring."
 ---
 
 <div class="hero" markdown>
@@ -20,7 +20,7 @@ description: "Free VST3/AUv3 plugin that automatically controls volume based on 
 
 ## What is MuteKeeper? { #about }
 
-MuteKeeper is a **free** VST3 / AUv3 plugin that automatically controls audio signal levels based on your DAW's transport state — **Stopped**, **Playing**, or **Recording**.
+MuteKeeper is a **free** plugin that automatically controls audio signal levels based on your DAW's transport state — **Stopped**, **Playing**, or **Recording**.
 
 Whether you're running PA for a live show, automating talkback mic control or managing monitor mixes in the studio, MuteKeeper handles the "change the mute status when the DAW state changes" workflow automatically. Transport-aware automatic volume control significantly reduces operational burden.
 
